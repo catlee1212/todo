@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #454545;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --lightPink: #B7094C;
+  --darkPink: #A01A58;
+  --lightBlue: #0091AD;
+  --darkBlue: #1780a1;
+  --darkColor: #ffffff;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+/***************************************
+ To do Main 
+ ****************************************/
+
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todoBackground {
+  background-color: #f0f0f0;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.todoHeadline {
+  background: rgb(160, 26, 88);
+  background: linear-gradient(180deg, rgba(160, 26, 88, 1) 0%, rgba(23, 128, 161, 1) 100%);
+  padding: 20px;
+  color: var(--darkColor);
+}
+
+.todo {
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #fff;
+}
+
+.todoText {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.todoDone {
+  /* background-color: var(--darkPink); */
+  background: rgb(183, 9, 76);
+  background: linear-gradient(90deg, rgba(183, 9, 76, 1) 0%, rgba(147, 24, 81, 1) 100%);
+}
+
+.todoOpen {
+  /* background-color: var(--darkBlue); */
+  background: rgb(0, 145, 173);
+  background: linear-gradient(90deg, rgba(0, 145, 173, 1) 0%, rgba(20, 109, 136, 1) 100%);
+}
+
+.addTodo {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addTodo .inputTodo {
+  flex-grow: 1;
+}
+
+.addTodo .addButton {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+
+/***************************************
+ Button
+ ****************************************/
+
+button {
+  padding: 20px;
+  color: var(--darkColor);
+  border: 0px;
+  cursor: pointer;
+}
+
+.addButton {
+  background-color: #A01A58;
+}
+
+.todoDone button {
+  background-color: var(--lightPink);
+}
+
+
+.todoOpen button {
+  background-color: var(--lightBlue);
+}
