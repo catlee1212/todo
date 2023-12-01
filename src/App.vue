@@ -8,7 +8,7 @@
       </div>
       <div class="addTodo">
         <input class="inputTodo" type="text" v-model="newTodo" />
-        <button class="addButton" @click="addTodo()">Add to do</button>
+        <button class="addButton" @click="addTodo()">Add todo</button>
       </div>
 
       <div v-for="(todo, idx) in todos" :key="todo.todo">
