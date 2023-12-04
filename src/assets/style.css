@@ -32,10 +32,13 @@ img {
   --firstPink: #B7094C;
   --secondPink: #A01A58;
   --thirdPink: #841046;
+  --fourthPink: #670128;
   --firstBlue: #0091AD;
   --secondBlue: #1780a1;
+  --thirdBlue: #005c6e;
   --fontColor: #ffffff;
   --transition: 300ms;
+  --columnsHeight: 60px;
 }
 
 h1 {
@@ -72,14 +75,16 @@ h1 {
 
 .todoHeadline p {
   font-style: italic;
+  font-size: 15px;
 }
 
 .todo {
-  cursor: pointer;
   color: #fff;
   display: flex;
   justify-content: space-between;
   border: 2px solid #fff;
+  align-items: center;
+  height: var(--columnsHeight);
 }
 
 .todoText {
@@ -98,7 +103,8 @@ h1 {
 }
 
 .addTodo {
-  padding: 20px;
+  height: var(--columnsHeight);
+  margin: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -112,17 +118,35 @@ h1 {
   margin-left: 10px;
 }
 
+.state {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoDone .state {
+  background-color: var(--thirdBlue);
+}
+
+.todoOpen .state {
+  background-color: var(--fourthPink);
+}
 
 /***************************************
  Button
  ****************************************/
 
 button {
-  padding: 20px;
   color: var(--fontColor);
   border: 0px;
   cursor: pointer;
   font-size: 15px;
+  height: 100%;
+  padding: 20px;
 }
 
 .addButton {
@@ -138,7 +162,10 @@ button {
   background-color: var(--firstBlue);
 }
 
-
 .todoOpen button {
   background-color: var(--firstPink);
+}
+
+.svg-inline--fa {
+  margin: 0px 5px 0px 5px;
 }

@@ -3,10 +3,18 @@
     class="todo"
     :class="{ todoDone: this.todo.done, todoOpen: !this.todo.done }"
   >
-    <div class="todoText" @click="toggleTodo()">{{ todo.todo }}</div>
+    <div class="state" @click="toggleTodo()" v-if="this.todo.done">
+      <font-awesome-icon class="fontAwesome" icon="fa-solid fa-check" />
+    </div>
+
+    <div class="state" @click="toggleTodo()" v-if="!this.todo.done">
+      <font-awesome-icon class="fontAwesome" icon="fa-solid fa-xmark" />
+    </div>
+
+    <div class="todoText">{{ todo.todo }}</div>
     <button @click="removeTodo()">
       <font-awesome-icon class="fontAwesome" icon="fa-solid fa-trash" />
-      Delete todo
+      Delete
     </button>
   </div>
 </template>

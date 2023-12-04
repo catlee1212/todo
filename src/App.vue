@@ -4,13 +4,13 @@
       <div class="todoHeadline">
         <h1>My todos</h1>
         <p v-if="openTodos.length > 0">Open todos: {{ openTodos.length }}</p>
-        <p v-else>No open to dos</p>
+        <p v-else>Congratulation there are no open todos</p>
       </div>
       <div class="addTodo">
         <input class="inputTodo" type="text" v-model="newTodo" />
         <button class="addButton" @click="addTodo()">
           <font-awesome-icon class="fontAwesome" icon="fa-solid fa-plus" />
-          Add todo
+          Add
         </button>
       </div>
 
