@@ -1,10 +1,20 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url(../font/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "RobotoBlack";
+  src: url(../font/Roboto/Roboto-Black.ttf);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "RobotoRegular";
   font-size: 18px;
   color: #454545;
 }
@@ -19,15 +29,20 @@ img {
 }
 
 :root {
-  --lightPink: #B7094C;
-  --darkPink: #A01A58;
-  --lightBlue: #0091AD;
-  --darkBlue: #1780a1;
-  --darkColor: #ffffff;
+  --firstPink: #B7094C;
+  --secondPink: #A01A58;
+  --thirdPink: #841046;
+  --firstBlue: #0091AD;
+  --secondBlue: #1780a1;
+  --fontColor: #ffffff;
+  --transition: 300ms;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 /***************************************
@@ -49,10 +64,14 @@ h1 {
 }
 
 .todoHeadline {
-  background: rgb(160, 26, 88);
-  background: linear-gradient(180deg, rgba(160, 26, 88, 1) 0%, rgba(23, 128, 161, 1) 100%);
+  background-color: var(--thirdPink);
   padding: 20px;
-  color: var(--darkColor);
+  color: var(--fontColor);
+  text-align: center;
+}
+
+.todoHeadline p {
+  font-style: italic;
 }
 
 .todo {
@@ -69,15 +88,13 @@ h1 {
 }
 
 .todoDone {
-  /* background-color: var(--darkPink); */
-  background: rgb(183, 9, 76);
-  background: linear-gradient(90deg, rgba(183, 9, 76, 1) 0%, rgba(147, 24, 81, 1) 100%);
+  background: rgb(0, 145, 173);
+  background: linear-gradient(90deg, rgba(0, 145, 173, 1) 0%, rgba(20, 109, 136, 1) 100%);
 }
 
 .todoOpen {
-  /* background-color: var(--darkBlue); */
-  background: rgb(0, 145, 173);
-  background: linear-gradient(90deg, rgba(0, 145, 173, 1) 0%, rgba(20, 109, 136, 1) 100%);
+  background: rgb(183, 9, 76);
+  background: linear-gradient(90deg, rgba(183, 9, 76, 1) 0%, rgba(147, 24, 81, 1) 100%);
 }
 
 .addTodo {
@@ -102,20 +119,26 @@ h1 {
 
 button {
   padding: 20px;
-  color: var(--darkColor);
+  color: var(--fontColor);
   border: 0px;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .addButton {
-  background-color: #A01A58;
+  background-color: var(--thirdPink);
+}
+
+.addButton:hover {
+  background-color: var(--firstPink);
+  transition: var(--transition);
 }
 
 .todoDone button {
-  background-color: var(--lightPink);
+  background-color: var(--firstBlue);
 }
 
 
 .todoOpen button {
-  background-color: var(--lightBlue);
+  background-color: var(--firstPink);
 }
