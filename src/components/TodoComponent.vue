@@ -4,7 +4,10 @@
     :class="{ todoDone: this.todo.done, todoOpen: !this.todo.done }"
   >
     <div class="todoText" @click="toggleTodo()">{{ todo.todo }}</div>
-    <button @click="removeTodo()">Delete todo</button>
+    <button @click="removeTodo()">
+      <font-awesome-icon class="fontAwesome" icon="fa-solid fa-trash" />
+      Delete todo
+    </button>
   </div>
 </template>
 
