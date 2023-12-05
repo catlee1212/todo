@@ -7,8 +7,8 @@
         <p v-else>Congratulation there are no open todos</p>
       </div>
       <div class="addTodo">
-        <input class="inputTodo" type="text" v-model="newTodo" />
-        <button class="addButton" @click="addTodo()">
+        <input class="inputTodo col-7" type="text" v-model="newTodo" />
+        <button class="addButton col-5" @click="addTodo()">
           <font-awesome-icon class="fontAwesome" icon="fa-solid fa-plus" />
           Add
         </button>
